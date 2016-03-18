@@ -11,9 +11,5 @@ describe 'example::default' do
       expect(centos_71_example_run).to \
         create_example_resource 'my example resource'
     end
-
-    it 'creates file[/hello.txt]' do
-      expect(centos_71_example_run).to create_file '/hello.txt'
-    end
   end
 end

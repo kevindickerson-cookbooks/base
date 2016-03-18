@@ -2,4 +2,6 @@
 
 [![Build Status](https://travis-ci.org/kevindickerson-cookbooks/example.svg?branch=master)](https://travis-ci.org/kevindickerson-cookbooks/example)
 
-TODO: Enter the cookbook description here.
+This is an example cookbook that depends on a resource cookbook called `example_resources`, which defines a simple Chef resource. Look at it by visiting [example_resources on GitHub](https://github.com/kevindickerson-cookbooks/example_resources).
+
+Integration Tests are in Inspec. Unit tests are in ChefSpec.

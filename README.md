@@ -2,9 +2,11 @@
 
 [![Build Status](https://travis-ci.org/kevindickerson-cookbooks/example.svg?branch=master)](https://travis-ci.org/kevindickerson-cookbooks/example)
 
-This is an example cookbook that depends on a resource cookbook called `example_resources`, which defines a simple Chef resource. Look at it by visiting [example_resources on GitHub](https://github.com/kevindickerson-cookbooks/example).
+This is a simple cookbook that depends on a resource cookbook called [example_resources](https://supermarket.chef.io/cookbooks/example_resources), which defines a simple Chef resource.
 
-Integration Tests are in InSpec. Unit tests are in ChefSpec.
+The purpose of this cookbook is to illustrate the relationship between a cookbook that defines a new Chef resource, and another cookbook that consumes it.
+
+Integration tests are in InSpec. Unit tests are in ChefSpec.
 
 ## To test
 1. Install bundled gems using Bundler in context of ChefDK
@@ -19,8 +21,31 @@ $ chef exec bundle exec kitchen verify
 
 ## Gemfile
 
-Note how I lock gem versions using the Gemfile. Run your tests in the context of these `Gemfile` locks, otherwise you will likely see errors [at the time of this writing].
+Currently ChefDK provides Test Kitchen 1.5.0 which doesn't play nice with InSpec.
 
-## Prerequisites
+Note how I lock gem versions using the Gemfile. Run your tests in the context of these `Gemfile` locks, otherwise you will likely see problems [at the time of this writing].
 
-You probably want the latest ChefDK.
+This is because ChefDK does a shim thing and locks Test Kitchen to 1.5.0, so I use a Gemfile to lock to Test Kitchen 1.6.0.
+
+The ChefDK shim looks like this for ChefDK 0.15.2 on OS X:
+
+```bash
+$ cat /opt/chefdk/bin/kitchen
+#!/opt/chefdk/embedded/bin/ruby
+#--APP_BUNDLER_BINSTUB_FORMAT_VERSION=1--
+ENV["GEM_HOME"] = ENV["GEM_PATH"] = nil unless ENV["APPBUNDLER_ALLOW_RVM"] == "true"
+gem "chef-config", "= 12.7.2"
+gem "mixlib-config", "= 2.2.1"
+gem "mixlib-shellout", "= 2.2.6"
+gem "mixlib-install", "= 0.7.1"
+gem "net-scp", "= 1.2.1"
+gem "net-ssh", "= 3.0.2"
+gem "safe_yaml", "= 1.0.4"
+gem "thor", "= 0.19.1"
+gem "test-kitchen", "= 1.5.0"
+
+spec = Gem::Specification.find_by_name("test-kitchen", "= 1.5.0")
+bin_file = spec.bin_file("kitchen")
+
+Kernel.load(bin_file)
+```

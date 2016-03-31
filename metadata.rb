@@ -9,7 +9,7 @@ version '0.1.6'
 
 supports 'centos', '>= 5.11'
 supports 'debian', '>= 7.9'
-supports 'fedora', '>= 22'
+supports 'fedora', '>= 22.0'
 supports 'ubuntu', '>= 12.04'
 
 depends 'example_resources'

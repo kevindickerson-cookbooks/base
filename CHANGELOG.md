@@ -4,6 +4,12 @@ This file tracks and describes changes to `example_resources`.
 
 This project adheres to [semantic versioning 2.0][semver].
 
+v0.1.5 (2016-03-30)
+
+- Updates readme for ChefDK 0.12.0
+- Adds shields.io badge to readme
+- Changes grammar slightly in short description in metadata
+
 v0.1.4 (2016-03-20)
 
 - Adds more platform support to test suites

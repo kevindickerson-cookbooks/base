@@ -1,6 +1,6 @@
 # example
 
-[![Build Status](https://travis-ci.org/kevindickerson-cookbooks/example.svg?branch=master)](https://travis-ci.org/kevindickerson-cookbooks/example)
+[![Build Status](https://travis-ci.org/kevindickerson-cookbooks/example.svg?branch=master)](https://travis-ci.org/kevindickerson-cookbooks/example) [![Cookbook Version](https://img.shields.io/cookbook/v/example.svg)](https://supermarket.chef.io/cookbooks/example)
 
 This is a simple cookbook that depends on a resource cookbook called [example_resources](https://supermarket.chef.io/cookbooks/example_resources), which defines a simple Chef resource.
 
@@ -9,45 +9,13 @@ The purpose of this cookbook is to illustrate the relationship between a cookboo
 Integration tests are in InSpec. Unit tests are in ChefSpec.
 
 ## To test
-1. Install bundled gems using Bundler in context of ChefDK
-1. Converge in context of Bundler and ChefDK
-1. Verify in context of Bundler and ChefDK
+
+Install [ChefDK][chefdk] 0.12.0 or higher.  (Test Kitchen 1.6.0 or higher is required. Test Kitchen 1.6.0 is bundled with  0.12.0 or higher.)
+
+If you're using ChefDK ~> 0.11, look at [v0.1.4][v0.1.4] of this cookbook for instructions on testing.
 
 ```bash
-$ chef exec bundle install
-$ chef exec bundle exec kitchen converge
-$ chef exec bundle exec kitchen verify
-```
-
-## Gemfile
-
-Currently ChefDK provides Test Kitchen 1.5.0 which doesn't play nice with InSpec.
-
-Note how I lock gem versions using the Gemfile. Run your tests in the context of these `Gemfile` locks, otherwise you will likely see problems [at the time of this writing].
-
-This is because ChefDK does a shim thing and locks Test Kitchen to 1.5.0, so I use a Gemfile to lock to Test Kitchen 1.6.0.
-
-The ChefDK shim looks like this for ChefDK 0.15.2 on OS X:
-
-```bash
-$ cat /opt/chefdk/bin/kitchen
-#!/opt/chefdk/embedded/bin/ruby
-#--APP_BUNDLER_BINSTUB_FORMAT_VERSION=1--
-ENV["GEM_HOME"] = ENV["GEM_PATH"] = nil unless ENV["APPBUNDLER_ALLOW_RVM"] == "true"
-gem "chef-config", "= 12.7.2"
-gem "mixlib-config", "= 2.2.1"
-gem "mixlib-shellout", "= 2.2.6"
-gem "mixlib-install", "= 0.7.1"
-gem "net-scp", "= 1.2.1"
-gem "net-ssh", "= 3.0.2"
-gem "safe_yaml", "= 1.0.4"
-gem "thor", "= 0.19.1"
-gem "test-kitchen", "= 1.5.0"
-
-spec = Gem::Specification.find_by_name("test-kitchen", "= 1.5.0")
-bin_file = spec.bin_file("kitchen")
-
-Kernel.load(bin_file)
+$ kitchen verify
 ```
 
 ## Development
@@ -64,3 +32,5 @@ Created and maintained by [Kevin Dickerson](kevin), <kevin.dickerson@loom.techno
 [repository]: https://github.com/kevindickerson-cookbooks/example
 [supermarket]: https://supermarket.chef.io/cookbooks/example
 [issues]: https://github.com/kevindickerson-cookbooks/example/issues
+[chefdk]: https://downloads.chef.io/chef-dk/
+[v0.1.4]: https://github.com/kevindickerson-cookbooks/example/tree/v0.1.4

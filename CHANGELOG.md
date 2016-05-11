@@ -1,8 +1,18 @@
-# Changelog
+# Change log
 
 This file tracks and describes changes to `example_resources`.
 
 This project adheres to [semantic versioning 2.0][semver].
+
+v0.1.7 (2016-05-11)
+
+- Updates ownership details to Loom in readme and change log
+- Updates metadata for new organization
+- Adds change log notes for v0.1.6
+
+v0.1.6 (2016-03-30)
+
+- Updates platform versions
 
 v0.1.5 (2016-03-30)
 

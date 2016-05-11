@@ -1,6 +1,6 @@
 # example
 
-[![Build Status](https://travis-ci.org/kevindickerson-cookbooks/example.svg?branch=master)](https://travis-ci.org/kevindickerson-cookbooks/example) [![Cookbook Version](https://img.shields.io/cookbook/v/example.svg)](https://supermarket.chef.io/cookbooks/example)
+[![Build Status](https://travis-ci.org/loom-cookbooks/example.svg?branch=master)](https://travis-ci.org/loom-cookbooks/example) [![Cookbook Version](https://img.shields.io/cookbook/v/example.svg)](https://supermarket.chef.io/cookbooks/example)
 
 This is a simple cookbook that depends on a resource cookbook called [example_resources](https://supermarket.chef.io/cookbooks/example_resources), which defines a simple Chef resource.
 
@@ -26,11 +26,13 @@ $ kitchen verify
 
 ## Author
 
-Created and maintained by [Kevin Dickerson](kevin), <kevin.dickerson@loom.technology>.
+Created and maintained by Kevin Dickerson of [Loom](loom). <kevin.dickerson@loom.technology>.
 
-[kevin]: http://kevinjdickerson.com
-[repository]: https://github.com/kevindickerson-cookbooks/example
+[![Loom](http://loom.technology/assets/loom-logo-black.svg)](https://loom.technology)
+
+[loom]: https://loom.technology
+[repository]: https://github.com/loom-cookbooks/example
 [supermarket]: https://supermarket.chef.io/cookbooks/example
-[issues]: https://github.com/kevindickerson-cookbooks/example/issues
+[issues]: https://github.com/loom-cookbooks/example/issues
 [chefdk]: https://downloads.chef.io/chef-dk/
-[v0.1.4]: https://github.com/kevindickerson-cookbooks/example/tree/v0.1.4
+[v0.1.4]: https://github.com/loom-cookbooks/example/tree/v0.1.4

@@ -14,5 +14,5 @@ supports 'ubuntu', '>= 12.04'
 
 depends 'example_resources'
 
-source_url 'https://github.com/kevindickerson-cookbooks/example'
-issues_url 'https://github.com/kevindickerson-cookbooks/example/issues'
+source_url 'https://github.com/loom-cookbooks/example'
+issues_url 'https://github.com/loom-cookbooks/example/issues'

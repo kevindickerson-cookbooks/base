@@ -6,6 +6,7 @@ This project adheres to [semantic versioning 2.0][semver].
 
 v0.1.10 - 2016-09-25
 - Adds `.rspec` file for human-readable output
+- Updates Gemfile version constraints
 
 v0.1.9 - 2016-09-25
 - Updates unit test structure

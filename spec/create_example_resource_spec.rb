@@ -3,47 +3,47 @@ require 'spec_helper'
 describe 'example::default' do
   let(:create_example_resource_centos_511) do
     ChefSpec::ServerRunner.new(platform: 'centos', version: '5.11')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_centos_67) do
     ChefSpec::ServerRunner.new(platform: 'centos', version: '6.7')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_centos_72) do
     ChefSpec::ServerRunner.new(platform: 'centos', version: '7.2.1511')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_fedora_22) do
     ChefSpec::ServerRunner.new(platform: 'fedora', version: '22')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_fedora_23) do
     ChefSpec::ServerRunner.new(platform: 'fedora', version: '23')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_debian_79) do
     ChefSpec::ServerRunner.new(platform: 'debian', version: '7.9')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_debian_82) do
     ChefSpec::ServerRunner.new(platform: 'debian', version: '8.2')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_ubuntu_1204) do
     ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '12.04')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   let(:create_example_resource_ubuntu_1404) do
     ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '14.04')
-      .converge described_recipe
+                          .converge described_recipe
   end
 
   context 'on centos' do

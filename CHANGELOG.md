@@ -4,6 +4,12 @@ This file tracks and describes changes to `example_resources`.
 
 This project adheres to [semantic versioning 2.0][semver].
 
+v0.1.12 - 2016-09-25
+- Version bump for Supermarket
+
+v0.1.11 - 2016-09-25
+- Fixes for static testing
+
 v0.1.10 - 2016-09-25
 - Adds `.rspec` file for human-readable output
 - Updates Gemfile version constraints

@@ -4,7 +4,8 @@ This file tracks and describes changes to `example_resources`.
 
 This project adheres to [semantic versioning 2.0][semver].
 
-## [0.3.0] - 2015-12-03
+v0.1.9 - 2016-09-25
+- Updates unit test structure
 
 v0.1.8 - 2016-09-25
 - Updates "this cookbook tested with" ChefDK to v0.17.17

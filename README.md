@@ -8,9 +8,9 @@ The purpose of this cookbook is to illustrate the relationship between a cookboo
 
 Integration tests are in InSpec. Unit tests are in ChefSpec.
 
-## To test
+## To verify
 
-Tested with ChefDK v0.17.17. Should work with ChefDK v0.12.0 or higher.
+Verified with ChefDK v0.17.17. Should work with ChefDK v0.12.0 or higher.
 
 If you're using ChefDK ~> 0.11, look at [v0.1.4] of this cookbook for instructions on testing.
 

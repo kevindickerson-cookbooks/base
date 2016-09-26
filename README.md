@@ -20,18 +20,17 @@ $ kitchen verify
 
 ## Development
 
-* [GitHub][repository]
-* [Supermarket][supermarket]
-* [Issues, questions, requests][issues]
+* [GitHub]
+* [Supermarket]
+* [Issues, questions, requests]
 
 ## Author
 
 Created and maintained by Kevin Dickerson of [Loom]. <kevin.dickerson@loom.technology>.
 
 [Loom]: https://loom.technology
-[repository]: https://github.com/loom-cookbooks/example
-[supermarket]: https://supermarket.chef.io/cookbooks/example
-[issues]: https://github.com/loom-cookbooks/example/issues
-[chefdk]: https://downloads.chef.io/chef-dk/
+[GitHub]: https://github.com/loom-cookbooks/example
+[Supermarket]: https://supermarket.chef.io/cookbooks/example
+[Issues, questions, requests]: https://github.com/loom-cookbooks/example/issues
 [v0.1.4]: https://github.com/loom-cookbooks/example/tree/v0.1.4
 [example_resources]: https://github.com/loom-cookbooks/example_resources

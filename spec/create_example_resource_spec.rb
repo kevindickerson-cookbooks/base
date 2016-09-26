@@ -48,48 +48,48 @@ describe 'example::default' do
 
   context 'on centos' do
     it 'creates example_resource[my example resource]' do
-      expect(create_example_resource_centos_511).to \
-        create_example_resource('my example resource').with example_property:
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
-      expect(create_example_resource_centos_67).to \
-        create_example_resource('my example resource').with example_property:
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
-      expect(create_example_resource_centos_72).to \
-        create_example_resource('my example resource').with example_property:
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
+      expect(create_example_resource_centos_511)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
+      expect(create_example_resource_centos_67)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
+      expect(create_example_resource_centos_72)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
     end
   end
 
   context 'on fedora' do
     it 'creates example_resource[my example resource]' do
-      expect(create_example_resource_fedora_22).to \
-        create_example_resource('my example resource').with example_property: \
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
-      expect(create_example_resource_fedora_23).to \
-        create_example_resource('my example resource').with example_property: \
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
+      expect(create_example_resource_fedora_22)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
+      expect(create_example_resource_fedora_23)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
     end
   end
 
   context 'on debian' do
     it 'creates example_resource[my example resource]' do
-      expect(create_example_resource_debian_79).to \
-        create_example_resource('my example resource').with example_property: \
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
-      expect(create_example_resource_debian_82).to \
-        create_example_resource('my example resource').with example_property: \
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
+      expect(create_example_resource_debian_79)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
+      expect(create_example_resource_debian_82)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
     end
   end
 
   context 'on ubuntu' do
     it 'creates example_resource[my example resource]' do
-      expect(create_example_resource_ubuntu_1204).to \
-        create_example_resource('my example resource').with example_property: \
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
-      expect(create_example_resource_ubuntu_1404).to \
-        create_example_resource('my example resource').with example_property: \
-          '¡Buenas noches! ¡Este mensaje viene de `example` cookbook!'
+      expect(create_example_resource_ubuntu_1204)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
+      expect(create_example_resource_ubuntu_1404)
+        .to create_example_resource('my example resource')
+        .with example_property: unit_test_property_string
     end
   end
 end

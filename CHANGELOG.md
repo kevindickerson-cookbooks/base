@@ -4,8 +4,11 @@ This file tracks and describes changes to `example_resources`.
 
 This project adheres to [semantic versioning 2.0][semver].
 
+v0.1.13 - 2016-09-25
+- Improves style of unit tests
+
 v0.1.12 - 2016-09-25
-- Version bump for Supermarket
+- Bumps version for Supermarket
 
 v0.1.11 - 2016-09-25
 - Fixes for static testing
